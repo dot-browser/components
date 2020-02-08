@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es3",
+        "noImplicitAny": false,
+        "outDir": "built",
+        "rootDir": ".",
+        "sourceMap": false,
+        "jsx": "react",
+        "esModuleInterop": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
