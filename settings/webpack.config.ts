@@ -1,5 +1,8 @@
 import path from 'path';
 import WriteFilePlugin from 'write-file-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+import { EnvironmentPlugin } from 'webpack';
 
 export const aliases = {
     '~/renderer': path.resolve(__dirname, 'src', 'renderer'),
@@ -9,11 +12,23 @@ export const aliases = {
 
 const config = {
     mode: process.env.ENV === 'dev' ? 'development' : 'production',
-    target: 'electron-renderer',
+    target: 'web',
     entry: path.resolve(__dirname, 'src', 'renderer', 'settings', 'index.tsx'),
+    plugins: [
+        new WriteFilePlugin(),
+        new HtmlWebpackPlugin({  
+            template: path.resolve(__dirname, 'static', 'pages', 'app.html'),
+            inject: true,
+            filename: `index.html`
+        }),
+        new EnvironmentPlugin({
+            'ENV': process.env.ENV,
+            'dev': process.env.ENV === "dev"
+        })
+    ],
     devServer: {
         contentBase: path.join(__dirname, 'build'),
-        port: 4444,
+        port: 4446,
         inline: false,
         disableHostCheck: true,
         headers: {
