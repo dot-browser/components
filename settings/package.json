@@ -15,6 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^13.7.0",
+    "awesome-typescript-loader": "^5.2.1",
     "cross-env": "^7.0.0",
     "mobx": "^5.15.4",
     "mobx-react": "^6.1.7",
@@ -23,6 +24,7 @@
     "styled-components": "^5.0.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
+    "url-loader": "^3.0.0",
     "write-file-webpack-plugin": "^4.5.1"
   }
 }
