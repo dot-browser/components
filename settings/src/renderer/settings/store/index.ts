@@ -1,5 +1,12 @@
 import React from 'react';
 import { observable } from "mobx";
+import { icons } from '../constants/icons';
+
+interface IUser {
+    username: string,
+    avatar: any,
+    email: string
+}
 
 class Store {
     @observable
@@ -7,6 +14,13 @@ class Store {
 
     @observable
     public indicatorPosition: number = 10;
+
+    @observable
+    public session: IUser = {
+        username: "Guest",
+        avatar: icons.defaultAvatar,
+        email: "guest@dothq.co"
+    }
 
     public onInputChange = (e) => {
         const stripped = window.location.href.split("?")[0];

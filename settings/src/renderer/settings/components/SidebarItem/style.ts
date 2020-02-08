@@ -3,10 +3,14 @@ import styled, { css } from 'styled-components';
 export const StyledSidebarItem = styled.div`
     height: 52px;
     padding-left: 32px;
-    transition: 0.3s opacity;
+    transition: 0.3s opacity, 0.2s background-color;
     display: flex;
     width: calc(400px - 32px);
     padding-left: 32px;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+    }
 
     ${({ visible }: { visible?: boolean }) => css`
         opacity: ${visible ? 1 : 0};

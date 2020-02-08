@@ -7,12 +7,13 @@ interface Props {
     text: any,
     selected: boolean,
     visible: boolean,
-    key: number
+    isUser?: boolean
+    key?: number
 }
 
-export const SidebarItem = observer(({ icon, text, selected, visible }: Props) => (
+export const SidebarItem = observer(({ icon, text, selected, visible, isUser }: Props) => (
     <StyledSidebarItem visible={visible}>
-        <Icon icon={icon} />
+        <Icon icon={icon} style={{ borderRadius: isUser ? '50px' : '0' }} />
         <Name>{text}</Name>
     </StyledSidebarItem>
 ))

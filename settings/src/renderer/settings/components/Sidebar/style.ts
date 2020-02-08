@@ -6,6 +6,10 @@ export const StyledSidebar = styled.div`
     background-color: #fafafa;
     position: absolute;
     overflow: hidden;
+
+    * {
+        user-select: none;
+    }
 `;
 
 export const Indicator = styled.div`
