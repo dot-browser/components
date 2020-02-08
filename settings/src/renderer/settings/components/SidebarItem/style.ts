@@ -7,6 +7,7 @@ export const StyledSidebarItem = styled.div`
     display: flex;
     width: calc(400px - 32px);
     padding-left: 32px;
+    margin-bottom: 4px;
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.03);
