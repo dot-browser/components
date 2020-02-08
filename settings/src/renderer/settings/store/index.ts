@@ -16,6 +16,9 @@ class Store {
     public indicatorPosition: number = 10;
 
     @observable
+    public selectedCategory: string;
+
+    @observable
     public session: IUser = {
         username: "Guest",
         avatar: icons.defaultAvatar,
