@@ -6,7 +6,7 @@ import * as info from '../../../shared/icons/info.svg'
 import * as feedback from '../../../shared/icons/feedback.svg'
 
 import * as favicon from '../../../shared/icons/settings.ico'
-import * as defaultAvatar from '../../../shared/icons/defaultAvatar.png'
+import * as defaultAvatar from '../../../shared/icons/default.svg'
 
 export const icons = {
     search: search.default,
