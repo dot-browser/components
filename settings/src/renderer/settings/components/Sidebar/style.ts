@@ -7,6 +7,7 @@ export const StyledSidebar = styled.div`
     position: absolute;
     overflow: hidden;
     transition: 0.2s width, 0.2s box-shadow, 0.2s opacity;
+    z-index: 1;
 
     * {
         user-select: none;

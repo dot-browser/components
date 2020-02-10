@@ -55,6 +55,10 @@ if(process.env.ENV == "dev") {
             font-display: swap;
             src: url(${fonts.robotoBlack}) format('ttf');
         }
+
+        ::selection {
+            background-color: #cfe8fc;
+        }
     `
 
     document.head.appendChild(styleElement);

@@ -29,7 +29,7 @@ export const Toolbar = observer(() => (
         </Container>
         <FullSizeContainer isSearchToggled={store.isSearchToggled}>
             <FSSearch isSearchToggled={store.isSearchToggled} />
-            <BackIcon icon={icons.info} isSearchToggled={store.isSearchToggled} onClick={() => store.isSearchToggled = false} />
+            <BackIcon icon={icons.close} isSearchToggled={store.isSearchToggled} onClick={() => store.isSearchToggled = false} />
         </FullSizeContainer>
     </StyledToolbar>
 ))

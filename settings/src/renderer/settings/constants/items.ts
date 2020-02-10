@@ -11,7 +11,6 @@ export const items: Items = {
             id: "id.profile.info",
             component: CardProfile,
             hideName: true,
-            sandbox: true
         },
         {
             type: "spacer"
