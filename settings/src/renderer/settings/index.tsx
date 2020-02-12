@@ -59,6 +59,10 @@ if(process.env.ENV == "dev") {
         ::selection {
             background-color: #cfe8fc;
         }
+
+        br {
+            user-select: none;
+        }
     `
 
     document.head.appendChild(styleElement);
